@@ -1,0 +1,116 @@
+/* 
+모든 scss파일에서 사용할 변수에 대한 정의만 작성
+(이 파일은 vue.config.js 또는 webpack.config.js 에 적용함)
+*/ 
+
+// color
+$color-def: #e6007e !default;
+$color-black: #000 !default;
+$color-white: #fff !default;
+$color-active: #051335 !default;
+$color-skyblue-1: #abc3ff !default;
+$color-skyblue-2: #d9e4ff !default;
+$color-lightpink: #ffd8ee !default;
+$color-pitch: #ffe8c9 !default;
+$color-yellow: #ffd600 !default;
+$color-lime: #80bc00 !default;
+$color-bluegreen: #004e59 !default;
+$color-navy: #171c35 !default;
+
+// 텍스트, 라인, 배경 등에 사용되는 색상.
+$color-err: #e34140 !default;
+$color-suc: #00aa2f !default; //긍정 Color값 변경
+
+$color-3: #333 !default;
+$color-6: #666 !default;
+$color-8: #888 !default;
+$color-9: #999 !default;
+$color-21: #212121 !default;
+$color-26: #262626 !default;
+$color-40: #404040 !default;
+$color-70: #707070 !default;
+$color-7b: #7b7b7b !default;
+$color-a: #aaa !default;
+$color-b: #bbb !default;
+$color-c: #ccc !default;
+$color-d: #ddd !default;
+$color-e: #eee !default;
+$color-f3: #f3f3f3 !default;
+$color-f5: #f5f5f5 !default;
+$color-f6: #f6f6f6 !default;
+$color-f8: #f8f8f8 !default;
+$color-fa: #fafafa !default;
+$color-fb: #fbfbfb !default;
+$color-e6: #e6e6e6 !default;
+$color-d6: #d6d6d6 !default;
+$color-bf: #bfbfbf !default;
+
+$base-cl-gray1: #666 !default;
+$base-cl-gray2: #aaa !default;
+$base-cl-gray3: #bbb !default;
+$base-cl-gray4: #ddd !default;
+$base-cl-gray5: #eee !default;
+$base-cl-gray6: #f3f3f3 !default;
+$base-cl-gray7: #f5f5f5 !default;
+$base-cl-gray8: #f8f8f8 !default;
+$base-cl-gray9: #fafafa !default;
+$base-cl-black1: #2d2926;
+
+// font - font-weight 기준 웹폰트 변경 시 nskr 폰트 사용 : 100/400/700
+$font-family: 'nskr', -apple-system, 'droid sans fallback', 'Apple SD Gothic Neo', 'AppleGothic', 'Malgun Gothic',
+  '맑은 고딕', Dotum, '돋움', sans-serif;
+
+// 서체별 font-weight 기준
+$fw-r: 100;
+$fw-m: 400;
+$fw-b: 700;
+
+$fs-xxxl: 20px;
+$fs-xxl: 18px;
+$fs-xl: 16px;
+$fs-l: 15px;
+$fs-m: 14px;
+$fs-s: 13px;
+$fs-xs: 12px;
+$fs-xxs: 11px;
+$font-normal: normal;
+
+// size
+$mw-s: 320px;
+$mw-m: 1440px;
+$mw-l: 1920px;
+$w-m: 362px;
+$header-h: 48px;
+$footer-h: auto;
+
+// mixin
+// @include vendorPrefix(transition, 0.5s);
+// @mixin vendorPrefix($property, $value) {
+//   @each $prefix in -webkit-, -moz-, -ms-, -o-, '' {
+//     #{$prefix}#{$property}: $value;
+//   }
+// }
+
+//다중 말줄임적용
+@mixin ellipsis {
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin ellipsisMuti($line-clamp) {
+  overflow: hidden;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $line-clamp;
+}
+// @include position(absolute, $top: 10px, $left: 50%);
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
